@@ -1,0 +1,17 @@
+<h1>New Page</h1>
+
+
+<%= form_with model: @post, local: true do |form| %>
+
+<p><%= form.label :name %><br>
+<%= form.text_field :name %> #titleの入力フォーム生成
+</p>
+
+<p><%= form.label :email %><br>
+<%= form.text_area :email %> #bodyの入力フォーム生成
+</p>
+
+<p><%= form.submit %> #送信ボタンを生成
+</p>
+
+<% end %>
