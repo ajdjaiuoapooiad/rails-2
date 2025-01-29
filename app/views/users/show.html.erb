@@ -1,0 +1,21 @@
+<h1>Show Page</h1>
+
+
+
+<div class="button-container">
+    <%= link_to '新しい投稿', new_user_path %>
+</div>
+
+
+        <h2>Name</h2>
+        <p><%= @user.name %></p>
+
+        <h2>Email</h2>
+        <p><%= @user.email %></p>
+        
+
+        <div >
+            <%= link_to '編集', edit_user_path(@user) %>
+            <%= link_to '削除', user_path(@user), method: :delete %>
+        </div>
+

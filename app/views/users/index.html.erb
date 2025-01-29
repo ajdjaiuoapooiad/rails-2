@@ -1,1 +1,23 @@
-<h1>User Index</h1>
+<h1>Index Page</h1>
+
+
+
+<div class="button-container">
+    <%= link_to '新しい投稿', new_user_path %>
+</div>
+
+<ul>
+    <% @users.each do |post| %>
+    <li>
+        <h2><%= post.name %></h2>
+        <p><%= post.email %></p>
+        
+
+        <div >
+            <%= link_to '編集', edit_user_path(post) %>
+            <%= link_to '削除', user_path(post), method: :delete %>
+        </div>
+
+    </li>
+    <% end %>
+</ul>
