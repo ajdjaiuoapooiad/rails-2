@@ -1,5 +1,5 @@
-class UserController < ApplicationController
-  before_action :set_post, only: [:edit, :update]
+class UsersController < ApplicationController
+
 
   def index 
     @users = User.all
@@ -28,7 +28,4 @@ class UserController < ApplicationController
     params.require(:user).permit(:name, :email) #パラメーターのキー
   end
 
-  def set_post
-    @user = User.find(params[:id])
-  end
 end
