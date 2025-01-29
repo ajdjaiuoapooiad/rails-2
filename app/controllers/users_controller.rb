@@ -28,6 +28,10 @@ class UsersController < ApplicationController
 
   def edit 
     @user = User.find(params[:id])
+  end
+
+  def update 
+    @user = User.find(params[:id])
     if @user.update(post_params)
       redirect_to users_path
     else
@@ -45,7 +49,7 @@ class UsersController < ApplicationController
 
   private 
   def post_params
-    params.require(:user).permit(:name, :email) #パラメーターのキー
+    params.require(:user).permit(:name, :email) 
   end
 
 end
