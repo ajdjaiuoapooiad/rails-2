@@ -1,21 +1,21 @@
 <h1>Show Page</h1>
+<%= link_to '新しい投稿', new_user_path %>
 
 
 
-<div class="button-container">
-    <%= link_to '新しい投稿', new_user_path %>
+
+<div class="p-5 m-3 border">
+    <h2>Name</h2>
+    <p><%= @user.name %></p>
+    
+    <h2>Email</h2>
+    <p><%= @user.email %></p>
+    
+    
+    <div  class="d-flex flex-row">
+        <p class="p-2"><%= link_to '編集', edit_user_path(@user) %></p>
+        <p class="p-2"><%= button_to '削除', user_path(@user), method: :delete %></p>
+    </div>
 </div>
 
-
-        <h2>Name</h2>
-        <p><%= @user.name %></p>
-
-        <h2>Email</h2>
-        <p><%= @user.email %></p>
-        
-
-        <div >
-            <%= link_to '編集', edit_user_path(@user) %>
-            <%= button_to '削除', user_path(@user), method: :delete %>
-        </div>
 
